@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SharedPackage.LoginActivity">
+
+    <include layout="@layout/layout_background"/>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/P"
+        app:cardCornerRadius="45dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-75dp"
+        android:rotation="45"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="330dp"
+        android:layout_height="330dp">
+
+
+        <RelativeLayout
+            android:rotation="-45"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_marginStart="75dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:theme="@style/EditTextTheme"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorwhite"
+                    android:hint="@string/mail"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:inputType="textPassword"
+                    android:theme="@style/EditTextTheme"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colorwhite"
+                    android:hint="@string/password"
+                    android:drawableStart="@drawable/ic_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <Button
+        android:drawableEnd="@drawable/ic_login"
+        android:textColor="@color/colorwhite"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="center"
+        android:background="@drawable/shape_button"
+        android:text="@string/login"
+        android:layout_alignEnd="@id/P"
+        android:layout_alignBottom="@id/P"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+
+
+</RelativeLayout>

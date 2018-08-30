@@ -8,17 +8,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/NoTitleBar">
+        <activity android:name=".SharedPackage.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".SellerHomeActivity">
 
         </activity>
+=======
+
+        <activity android:name=".SharedPackage.LoginActivity"></activity>
+>>>>>>> aec3591ebe37f7f31ef45c95da1c3bbef69c2dc4
     </application>
 
 </manifest>

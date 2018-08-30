@@ -35,7 +35,7 @@
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/bgBottomNavigation"
+        app:itemBackground="@color/colorAccent"
         app:itemIconTint="@drawable/bottom_nav_item_style"
         app:itemTextColor="@drawable/bottom_nav_item_style"
         android:foreground="?attr/selectableItemBackground"

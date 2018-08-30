@@ -16,14 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
+
         <activity android:name=".SellerHomeActivity">
 
         </activity>
-=======
 
         <activity android:name=".SharedPackage.LoginActivity"></activity>
->>>>>>> aec3591ebe37f7f31ef45c95da1c3bbef69c2dc4
     </application>
 
 </manifest>

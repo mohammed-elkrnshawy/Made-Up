@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorWhite">#fff</color>
-    <color name="bgBottomNavigation">#fe485a</color>
-    <color name="colorYellow">#ffdd00</color>
-    <color name="colorBlack">#000</color>
-=======
+
     <color name="colorPrimary">#fbb03b</color>
     <color name="colorPrimaryDark">#29abe2</color>
     <color name="colorAccent">#c1272d</color>
     <color name="colorwhite">#FFF</color>
     <color name="colorgray">#f8f7f7</color>
->>>>>>> aec3591ebe37f7f31ef45c95da1c3bbef69c2dc4
+    <color name="colorBlack">#000000</color>
 </resources>

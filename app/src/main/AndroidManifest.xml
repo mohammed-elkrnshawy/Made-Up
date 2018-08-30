@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SharedPackage.LoginActivity"></activity>
+        <activity android:name=".SharedPackage.LoginActivity" />
+        <activity android:name=".SharedPackage.StartActivity"></activity>
     </application>
 
 </manifest>

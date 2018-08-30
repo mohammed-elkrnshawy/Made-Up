@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Made Up</string>
+    <string name="profile">Profile</string>
+    <string name="sales">Sales</string>
+    <string name="products">Products</string>
+
     <string name="login">Login</string>
     <string name="mail">Email</string>
     <string name="password">Password</string>

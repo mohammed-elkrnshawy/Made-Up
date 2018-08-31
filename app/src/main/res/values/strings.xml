@@ -3,8 +3,11 @@
     <string name="profile">Profile</string>
     <string name="sales">Sales</string>
     <string name="products">Products</string>
-
+    <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="mail">Email</string>
+    <string name="gender">Gender</string>
     <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="confirmpassword">Confirm Password</string>
 </resources>

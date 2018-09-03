@@ -3,10 +3,12 @@
     <string name="profile">Profile</string>
     <string name="sales">Sales</string>
     <string name="products">Products</string>
-
+    <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="mail">Email</string>
+    <string name="gender">Gender</string>
     <string name="password">Password</string>
+<<<<<<< HEAD
     <string name="back">Back</string>
     <string name="product_name">Product Name</string>
     <string name="delete">Delete</string>
@@ -21,4 +23,8 @@
     <string name="settings">Setting</string>
     <string name="logout">Logout</string>
 
+=======
+    <string name="username">Username</string>
+    <string name="confirmpassword">Confirm Password</string>
+>>>>>>> 1692ead10766318597e7a1a2b6556c39f487890e
 </resources>

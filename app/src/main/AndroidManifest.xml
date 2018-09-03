@@ -19,11 +19,15 @@
         <activity android:name=".SharedPackage.LoginActivity" />
         <activity android:name=".SharedPackage.StartActivity" />
         <activity android:name=".SellerHomeActivity" />
+<<<<<<< HEAD
         <activity android:name=".Seller.Activity.Product_Details" />
         <activity android:name=".Seller.Activity.Activity.Add_Product"/>
         <activity android:name=".Seller.Activity.Activity.Seller_Profile"/>
 
 
+=======
+        <activity android:name=".SharedPackage.RegisterActivity"></activity>
+>>>>>>> 1692ead10766318597e7a1a2b6556c39f487890e
     </application>
 
 </manifest>

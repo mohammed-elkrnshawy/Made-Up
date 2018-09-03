@@ -2,9 +2,16 @@
 <resources>
 
     <color name="colorPrimary">#fbb03b</color>
+    <color name="colorOrangDark">#ff884d</color>
+    <color name="colorYellow">#fbcb3b</color>
     <color name="colorPrimaryDark">#29abe2</color>
     <color name="colorAccent">#c1272d</color>
     <color name="colorwhite">#FFF</color>
     <color name="colorgray">#f8f7f7</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorview">#c9c6c6</color>
+    <color name="colorLightgray">#f4f1f1</color>
+    <color name="colorGreen">#5ce408</color>
+    <color name="colorLightGreen">#71ff1a</color>
+    <color name="colorLightBlue">#5eddfd</color>
 </resources>

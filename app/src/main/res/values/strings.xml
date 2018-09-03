@@ -7,4 +7,18 @@
     <string name="login">Login</string>
     <string name="mail">Email</string>
     <string name="password">Password</string>
+    <string name="back">Back</string>
+    <string name="product_name">Product Name</string>
+    <string name="delete">Delete</string>
+    <string name="productName">PRODUCT NAME</string>
+    <string name="productPrice">PRODUCT PRICE</string>
+    <string name="productDescription">PRODUCT DESCRIPTION</string>
+    <string name="productKeyWord">PRODUCT KEYWORDS</string>
+    <string name="addProduct">ADD PRODUCT</string>
+    <string name="yourName">Your Name</string>
+    <string name="subscripe">Subscripe</string>
+    <string name="order">Order</string>
+    <string name="settings">Setting</string>
+    <string name="logout">Logout</string>
+
 </resources>

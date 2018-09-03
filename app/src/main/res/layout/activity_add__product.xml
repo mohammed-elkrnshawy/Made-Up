@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorOrangDark"
+    tools:context=".Seller.Activity.Activity.Add_Product">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:id="@+id/addPro_back"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_back"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/addProduct"
+                android:textColor="@color/colorwhite"
+                android:textSize="26sp"
+                android:textStyle="bold|normal"
+                />
+
+        </RelativeLayout>
+
+
+    <ScrollView
+
+        android:layout_margin="10dp"
+
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        >
+
+
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/product_name"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/toolbar"
+                    android:background="@color/colorLightgray"
+                    />
+
+                <EditText
+                    android:id="@+id/productPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/productPrice"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/productName"
+                    android:background="@color/colorLightgray"
+                    />
+
+                <EditText
+                    android:id="@+id/productDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/productDescription"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/productPrice"
+                    android:background="@color/colorLightgray"
+                    />
+
+                <EditText
+                    android:id="@+id/productKeyWords"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/productKeyWord"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/productDesc"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/colorLightgray"
+                    />
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/photo"
+                        android:background="@drawable/style_button_add_photo"
+                        />
+                    <ImageButton
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="27dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/yes"
+                        android:background="@drawable/style_button_add_product"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

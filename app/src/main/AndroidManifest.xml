@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoTitleBar">
-        <activity android:name=".SharedPackage.SplashActivity">
+        <activity android:name=".SharedPackage.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".SharedPackage.LoginActivity" />
-        <activity android:name=".SharedPackage.StartActivity"></activity>
-
-        <activity android:name=".SellerHomeActivity"/>
+        <activity android:name=".SharedPackage.StartActivity" />
+        <activity android:name=".SellerHomeActivity" />
+        <activity android:name=".Seller.Activity.Product_Details" />
+        <activity android:name=".Seller.Activity.Activity.Add_Product"/>
+        <activity android:name=".Seller.Activity.Activity.Seller_Profile"/>
 
 
     </application>

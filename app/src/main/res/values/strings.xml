@@ -8,7 +8,7 @@
     <string name="mail">Email</string>
     <string name="gender">Gender</string>
     <string name="password">Password</string>
-<<<<<<< HEAD
+
     <string name="back">Back</string>
     <string name="product_name">Product Name</string>
     <string name="delete">Delete</string>
@@ -23,8 +23,19 @@
     <string name="settings">Setting</string>
     <string name="logout">Logout</string>
 
-=======
+
     <string name="username">Username</string>
     <string name="confirmpassword">Confirm Password</string>
->>>>>>> 1692ead10766318597e7a1a2b6556c39f487890e
+
+    <string name="billNumber">Number : </string>
+    <string name="billdate">Date : </string>
+    <string name="billtotal">Total : </string>
+    <string name="billStatus">Status : </string>
+    <string name="bill">Bill</string>
+    <string name="showDetails">Show Details</string>
+    <string name="search">Search</string>
+    <string name="receiver_info">Receiver info.</string>
+    <string name="ordered_products">Ordered Products</string>
+
+
 </resources>

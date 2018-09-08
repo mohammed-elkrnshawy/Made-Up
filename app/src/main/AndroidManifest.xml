@@ -9,13 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoTitleBar">
-        <activity android:name=".SharedPackage.SplashActivity" >
+        <activity android:name=".SharedPackage.SplashActivity"></activity>
+        <activity android:name=".SharedPackage.LoginActivity" />
+        <activity android:name=".SharedPackage.StartActivity" />
+        <activity android:name=".SellerHomeActivity" />
+        <activity android:name=".Seller.Activity.Product_Details" />
+        <activity android:name=".Seller.Activity.Activity.Add_Product" />
+        <activity android:name=".Seller.Activity.Activity.Seller_Profile" />
+        <activity android:name=".SharedPackage.RegisterActivity" />
+        <activity android:name=".Seller.Activity.Activity.Sales">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".SharedPackage.LoginActivity" />
         <activity android:name=".SharedPackage.StartActivity" />
         <activity android:name=".SellerHomeActivity" />
@@ -23,6 +32,9 @@
         <activity android:name=".Seller.Activity.Activity.Add_Product"/>
         <activity android:name=".Seller.Activity.Activity.Seller_Profile"/>
         <activity android:name=".SharedPackage.RegisterActivity"></activity>
+=======
+        <activity android:name=".Seller.Activity.Activity.Bill_Details"></activity>
+>>>>>>> 8427b896d9984f972dd802f09f65ed1b2954f3d5
     </application>
 
 </manifest>

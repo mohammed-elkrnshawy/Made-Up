@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup.Seller.Activity.Adapter;
+package com.example.a3zt.madeup.HandMaker.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

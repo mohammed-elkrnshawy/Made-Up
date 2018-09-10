@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup.SharedPackage;
+package com.example.a3zt.madeup.SharedPackage.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +15,6 @@ public class LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_shared_login);
+        setContentView(R.layout.shared_activity_login);
     }
 }

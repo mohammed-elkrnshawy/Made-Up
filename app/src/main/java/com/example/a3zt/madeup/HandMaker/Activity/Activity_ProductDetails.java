@@ -1,28 +1,26 @@
-package com.example.a3zt.madeup.Seller.Activity;
+package com.example.a3zt.madeup.HandMaker.Activity;
 
 
-import android.animation.ObjectAnimator;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.RatingBar;
 
 
+import com.example.a3zt.madeup.HandMaker.Adapter.ViewPagerAdapter;
 import com.example.a3zt.madeup.R;
-import com.example.a3zt.madeup.Seller.Activity.Adapter.ViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Product_Details extends AppCompatActivity {
+public class Activity_ProductDetails extends AppCompatActivity {
 
     ViewPager viewPager ;
     List<String> images  ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product__details);
+        setContentView(R.layout.saller_activity_product_details);
 
 
         images = new ArrayList<>();

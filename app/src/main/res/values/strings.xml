@@ -8,10 +8,6 @@
     <string name="mail">Email</string>
     <string name="gender">Gender</string>
     <string name="password">Password</string>
-<<<<<<< HEAD
-=======
-
->>>>>>> 8427b896d9984f972dd802f09f65ed1b2954f3d5
     <string name="back">Back</string>
     <string name="product_name">Product Name</string>
     <string name="delete">Delete</string>
@@ -25,15 +21,8 @@
     <string name="order">Order</string>
     <string name="settings">Setting</string>
     <string name="logout">Logout</string>
-<<<<<<< HEAD
     <string name="username">Username</string>
     <string name="confirmpassword">Confirm Password</string>
-=======
-
-
-    <string name="username">Username</string>
-    <string name="confirmpassword">Confirm Password</string>
-
     <string name="billNumber">Number : </string>
     <string name="billdate">Date : </string>
     <string name="billtotal">Total : </string>
@@ -45,5 +34,4 @@
     <string name="ordered_products">Ordered Products</string>
 
 
->>>>>>> 8427b896d9984f972dd802f09f65ed1b2954f3d5
 </resources>

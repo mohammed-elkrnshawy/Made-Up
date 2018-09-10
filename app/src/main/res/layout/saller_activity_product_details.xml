@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Seller.Activity.Product_Details">
+    tools:context=".HandMaker.Activity.Activity_ProductDetails">
 
     <RelativeLayout
         android:layout_width="match_parent"

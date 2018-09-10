@@ -1,8 +1,6 @@
 package com.example.a3zt.madeup;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -23,7 +21,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_home);
+        setContentView(R.layout.saller_activity_home);
         init();
 
         bnavigate = (BottomNavigationView) findViewById(R.id.navigation);
@@ -77,7 +75,7 @@ private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected = ne
     }
 
     public void buAddProduct(View view) {
-        Intent intent = new Intent(this , MainActivity.class);
-        startActivity(intent);
+       /* Intent intent = new Intent(this , MainActivity.class);
+        startActivity(intent);*/
     }
 }

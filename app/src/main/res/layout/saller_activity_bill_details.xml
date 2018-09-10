@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Seller.Activity.Activity.Bill_Details">
+    tools:context=".HandMaker.Activity.Activity_BillDetails">
 
     <LinearLayout
         android:id="@+id/toolbar"

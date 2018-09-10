@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup.SharedPackage;
+package com.example.a3zt.madeup.SharedPackage.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

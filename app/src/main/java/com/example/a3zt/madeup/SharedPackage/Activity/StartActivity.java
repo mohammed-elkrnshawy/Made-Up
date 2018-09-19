@@ -12,7 +12,7 @@ import com.example.a3zt.madeup.R;
 
 
 public class StartActivity extends AppCompatActivity {
-    Button Login,Register;
+    private Button Login,Register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

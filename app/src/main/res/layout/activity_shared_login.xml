@@ -66,6 +66,7 @@
 
 
     <Button
+        android:id="@+id/bt_login"
         android:drawableEnd="@drawable/ic_login"
         android:textColor="@color/colorwhite"
         android:paddingStart="20dp"

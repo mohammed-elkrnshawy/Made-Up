@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.a3zt.madeup.R;
 
-public class AddressActivity extends AppCompatActivity {
+public class Activity_ChooceAddress extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_chooce_address);
+        setContentView(R.layout.activity_saller_chooce_address);
     }
 }

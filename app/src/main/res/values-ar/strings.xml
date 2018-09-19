@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ماد اب</string>
+    <string name="profile">Profile</string>
+    <string name="sales">Sales</string>
+    <string name="products">Products</string>
+    <string name="register">انشاء حساب</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="mail">ايميل</string>
+    <string name="gender">الجنس</string>
+    <string name="password">الباسورد</string>
+    <string name="back">رجوع</string>
+    <string name="product_name">Product Name</string>
+    <string name="delete">Delete</string>
+    <string name="productName">PRODUCT NAME</string>
+    <string name="productPrice">PRODUCT PRICE</string>
+    <string name="productDescription">PRODUCT DESCRIPTION</string>
+    <string name="productKeyWord">PRODUCT KEYWORDS</string>
+    <string name="addProduct">ADD PRODUCT</string>
+    <string name="yourName">Your Name</string>
+    <string name="subscripe">Subscripe</string>
+    <string name="order">Order</string>
+    <string name="settings">Setting</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="billNumber">Number : </string>
+    <string name="billdate">Date : </string>
+    <string name="billtotal">Total : </string>
+    <string name="billStatus">Status : </string>
+    <string name="bill">Bill</string>
+    <string name="showDetails">Show Details</string>
+    <string name="search">Search</string>
+    <string name="receiver_info">Receiver info.</string>
+    <string name="ordered_products">Ordered Products</string>
+
+
+</resources>

@@ -10,6 +10,6 @@ public class Activity_BillDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_bill_details);
+        setContentView(R.layout.activity_saller_bill_details);
     }
 }

@@ -13,7 +13,7 @@ public class Activity_Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_profile);
+        setContentView(R.layout.activity_saller_profile);
         ratingBar = findViewById(R.id.ProfileRate);
 
         ratingBar.setRating(3);

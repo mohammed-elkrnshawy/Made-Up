@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup.Seller_Home_Container;
+package com.example.a3zt.madeup.HandMaker.HomeFragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.a3zt.madeup.R;
 
-public class SalesFragment extends Fragment {
+public class ProductsFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_seller_sales , container , false) ;
+        return inflater.inflate(R.layout.fragment_seller_products , container , false) ;
     }
 }

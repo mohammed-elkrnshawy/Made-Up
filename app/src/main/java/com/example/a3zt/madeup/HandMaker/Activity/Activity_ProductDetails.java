@@ -20,7 +20,7 @@ public class Activity_ProductDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_product_details);
+        setContentView(R.layout.activity_saller_product_details);
 
 
         images = new ArrayList<>();

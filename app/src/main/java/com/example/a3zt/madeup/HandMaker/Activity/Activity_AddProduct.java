@@ -10,6 +10,6 @@ public class Activity_AddProduct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_add__product);
+        setContentView(R.layout.activity_saller_add__product);
     }
 }

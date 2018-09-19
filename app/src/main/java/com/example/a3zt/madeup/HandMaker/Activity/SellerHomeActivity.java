@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup;
+package com.example.a3zt.madeup.HandMaker.Activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,9 +10,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.a3zt.madeup.Seller_Home_Container.ProductsFragment;
-import com.example.a3zt.madeup.Seller_Home_Container.ProfileFragment;
-import com.example.a3zt.madeup.Seller_Home_Container.SalesFragment;
+import com.example.a3zt.madeup.HandMaker.HomeFragment.ProductsFragment;
+import com.example.a3zt.madeup.HandMaker.HomeFragment.ProfileFragment;
+import com.example.a3zt.madeup.HandMaker.HomeFragment.SalesFragment;
+import com.example.a3zt.madeup.R;
 
 public class SellerHomeActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_home);
+        setContentView(R.layout.activity_saller_home);
         init();
 
         bnavigate = (BottomNavigationView) findViewById(R.id.navigation);

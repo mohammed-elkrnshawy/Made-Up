@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".SharedPackage.Activity.LoginActivity" />
         <activity android:name=".SharedPackage.Activity.StartActivity" />
-        <activity android:name=".SellerHomeActivity" />
+        <activity android:name=".HandMaker.Activity.SellerHomeActivity"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".HandMaker.Activity.Activity_ProductDetails" />
         <activity android:name=".HandMaker.Activity.Activity_AddProduct" />
         <activity android:name=".HandMaker.Activity.Activity_Profile" />

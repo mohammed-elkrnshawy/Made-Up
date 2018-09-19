@@ -11,6 +11,6 @@ public class Activity_Sales extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.saller_activity_sales);
+        setContentView(R.layout.activity_saller_sales);
     }
 }

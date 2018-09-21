@@ -30,8 +30,10 @@ public class SellerHomeActivity extends AppCompatActivity {
         bnavigate.setSelectedItemId(R.id.Nav_Products);
         loadFragment(new ProductsFragment());
         bnavigate.setOnNavigationItemSelectedListener(mItemSelected);
+        toolbar = getSupportActionBar();
+        toolbar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
-        toolbar.setTitle(R.string.products);
+        toolbar.setTitle("Products");
 
     }
 

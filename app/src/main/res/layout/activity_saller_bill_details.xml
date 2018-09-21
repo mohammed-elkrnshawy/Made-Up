@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".HandMaker.Activity.Activity_BillDetails">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@color/colorwhite"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/addPro_back"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_left"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/back"
+            android:textColor="@color/colorBlack"
+            android:textSize="26sp"
+            android:padding="10dp"
+        />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/billNumber"
+                android:textSize="22sp"
+                android:textColor="@color/colorBlack"
+                />
+            <TextView
+                android:id="@+id/billNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:text="485754554"
+                android:textColor="@color/colorBlack"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/receiveDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="22sp"
+            android:text="1/2/2018"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_profile_info"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/CountProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/colorBlack"
+            android:text="1 product"
+
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_below="@+id/CountProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/colorBlack"
+            android:text="50 L.E."
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorwhite"
+        android:paddingTop="20dp"
+        android:paddingLeft="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="@string/receiver_info"
+            android:background="@color/colorwhite"
+            android:textColor="@color/colorBlack"
+            android:paddingLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Mahmoud Hlal"
+            android:background="@color/colorwhite"
+            android:paddingLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="gamal abd elnaser street"
+            android:background="@color/colorwhite"
+            android:paddingLeft="5dp"
+            />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/ordered_products"
+            android:paddingLeft="10dp"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/selledProductListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/view_seller_product"
+        />
+
+
+
+</LinearLayout>

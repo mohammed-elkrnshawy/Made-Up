@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">Made Up</string>
+    <string name="app_name">ماد اب</string>
     <string name="profile">Profile</string>
     <string name="sales">Sales</string>
     <string name="products">Products</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
-    <string name="mail">Email</string>
-    <string name="gender">Gender</string>
-    <string name="password">Password</string>
-    <string name="back">Back</string>
+    <string name="register">انشاء حساب</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="mail">ايميل</string>
+    <string name="gender">الجنس</string>
+    <string name="password">الباسورد</string>
+    <string name="back">رجوع</string>
     <string name="product_name">Product Name</string>
     <string name="delete">Delete</string>
     <string name="productName">PRODUCT NAME</string>

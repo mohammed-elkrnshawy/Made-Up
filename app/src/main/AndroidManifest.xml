@@ -2,45 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a3zt.madeup">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/NoTitleBar">
-        <activity android:name=".SharedPackage.SplashActivity">
+        <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/NoTitleBar">
+                <activity android:name=".SharedPackage.Activity.SplashActivity">
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
 
-        </activity>
-        <activity android:name=".SharedPackage.LoginActivity" >
-
-        </activity>
-        <activity android:name=".SharedPackage.StartActivity" />
-        <activity android:name=".SellerHomeActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Seller.Activity.Product_Details" >
-
-        </activity>
-        <activity android:name=".Seller.Activity.Activity.Add_Product" >
-
-        </activity>
-        <activity android:name=".Seller.Activity.Activity.Seller_Profile" >
-
-        </activity>
-        <activity android:name=".SharedPackage.RegisterActivity" >
-
-        </activity>
-        <activity android:name=".Seller.Activity.Activity.Sales">
-
-        </activity>
-        <activity android:name=".Seller.Activity.Activity.Bill_Details">
-
-        </activity>
-    </application>
+                                <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+                </activity>
+                <activity android:name=".SharedPackage.Activity.LoginActivity" />
+                <activity android:name=".SharedPackage.Activity.StartActivity" />
+                <activity android:name=".HandMaker.Activity.SellerHomeActivity"
+                    android:theme="@style/AppTheme"/>
+                <activity android:name=".HandMaker.Activity.Activity_ProductDetails" />
+                <activity android:name=".HandMaker.Activity.Activity_AddProduct" />
+                <activity android:name=".HandMaker.Activity.Activity_Profile" />
+                <activity android:name=".SharedPackage.Activity.RegisterActivity" />
+                <activity android:name=".HandMaker.Activity.Activity_Sales" />
+                <activity android:name=".HandMaker.Activity.Activity_BillDetails" />
+                <activity android:name=".HandMaker.Activity.Activity_ChooceAddress"></activity>
+        </application>
 
 </manifest>

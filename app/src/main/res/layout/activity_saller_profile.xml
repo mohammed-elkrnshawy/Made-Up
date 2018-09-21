@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HandMaker.Activity.Activity_Profile"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/relContainer"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_seller_profile"
+
+        android:layout_marginLeft="1dp"
+        android:elevation="10dp"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:id="@+id/addPro_back"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginLeft="5dp"
+
+            android:src="@drawable/ic_circle_back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/profile"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="25sp"
+            />
+        <RelativeLayout
+            android:id="@+id/relPhoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_profile_photo"
+            >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/me"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/colorOrangDark"
+            />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yourName"
+            android:maxLength="16"
+            android:layout_below="@+id/relPhoto"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    
+    <RatingBar
+        android:id="@+id/ProfileRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relContainer"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@color/colorOrangDark"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/LinProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ProfileRate"
+        android:layout_marginTop="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_profile_info"
+
+            >
+
+            <TextView
+                android:id="@+id/ProductCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="30"
+                android:textSize="30sp"
+                android:textColor="@color/colorOrangDark"
+                />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_profile_icons"
+                >
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/order"
+                  android:layout_centerInParent="true"
+                  />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="45dp"
+                android:textSize="17sp"
+                android:text="@string/products"
+                />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_profile_info"
+
+            >
+
+            <TextView
+                android:id="@+id/Subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="30"
+                android:textSize="30sp"
+                android:textColor="@color/colorOrangDark"
+                />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_profile_icons"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="45dp"
+                android:textSize="17sp"
+                android:text="@string/subscripe"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_profile_info"
+
+            >
+
+            <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="30"
+                android:textSize="30sp"
+                android:textColor="@color/colorOrangDark"
+                />
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_profile_icons"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/order"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="45dp"
+                android:textSize="18sp"
+                android:text="@string/order"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelSetting"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/LinProfile"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_profile_info"
+        >
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_profile_icons"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/setting"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="55dp"
+                android:textSize="18sp"
+                android:text="@string/settings"
+                />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/right"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/RelSetting"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_profile_info"
+        >
+
+        <RelativeLayout
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_profile_icons"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/setting"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="55dp"
+            android:textSize="18sp"
+            android:text="@string/logout"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/right"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

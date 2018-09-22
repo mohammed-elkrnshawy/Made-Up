@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:id="@+id/Edt_Login_Email"
                     android:theme="@style/EditTextTheme"
                     android:textSize="14sp"
                     android:inputType="textEmailAddress"
@@ -46,6 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
+                    android:id="@+id/Edt_Login_Password"
                     android:inputType="textPassword"
                     android:theme="@style/EditTextTheme"
                     android:textSize="14sp"

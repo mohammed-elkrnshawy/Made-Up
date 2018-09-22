@@ -53,9 +53,13 @@ public class RegisterActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     rbCustomer.setChecked(false);
+                    Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                    Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_white));
                 }
                 else {
                     rbCustomer.setChecked(true);
+                    Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                    Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_white));
                 }
             }
         });
@@ -66,9 +70,13 @@ public class RegisterActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     rbHandMader.setChecked(false);
+                    Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                    Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_white));
                 }
                 else {
                     rbHandMader.setChecked(true);
+                    Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                    Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_white));
                 }
             }
         });
@@ -77,12 +85,16 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 rbHandMader.setChecked(true);
+                Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_white));
             }
         });
         Rel_Customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 rbCustomer.setChecked(true);
+                Rel_Customer.setBackground(getResources().getDrawable(R.drawable.shape_roll_pressed));
+                Rel_HandMader.setBackground(getResources().getDrawable(R.drawable.shape_white));
             }
         });
 
@@ -96,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
         Edt_ConfPassword = findViewById(R.id.Edt_ConfPassword);
         Edt_Phone = findViewById(R.id.Edt_Phone);
         Register = findViewById(R.id.Btn_Register);
-        Rel_Customer = findViewById(R.id.Rel_Customer);
+        Rel_Customer = findViewById(R.id.Rel_Customer2);
         Rel_HandMader = findViewById(R.id.Rel_HandMader);
         rbCustomer = findViewById(R.id.Radio_Customer);
         rbHandMader = findViewById(R.id.Radio_HandMader);

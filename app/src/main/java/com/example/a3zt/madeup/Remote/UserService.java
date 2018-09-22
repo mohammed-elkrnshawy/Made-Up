@@ -25,6 +25,11 @@ public interface UserService {
             @Query("password") String password
     );
 
+ @POST("auth/login")
+    Call<Response> Login(
+            @Query("email") String email ,
+            @Query("password") String password
+ );
 
 
 }

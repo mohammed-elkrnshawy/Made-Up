@@ -33,5 +33,10 @@
     <string name="receiver_info">Receiver info.</string>
     <string name="ordered_products">Ordered Products</string>
 
+    <string name="PleaseEnterYourName">من فضلك ادخل الاسم</string>
+    <string name="PleaseEnterYourEmail">من فضلك ادخل الايميل</string>
+    <string name="PleaseEnterYourPassword">من فضلك ادخل كلمة السر</string>
+    <string name="PleaseConfirmYourPassword">قم باعادة كلمة السر</string>
+
 
 </resources>

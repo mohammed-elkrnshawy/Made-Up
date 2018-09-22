@@ -27,32 +27,71 @@
                 android:layout_marginStart="40dp"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
-                android:layout_height="60dp">
+                android:layout_height="80dp">
 
                 <RelativeLayout
-                    android:layout_marginEnd="5dp"
-                    android:id="@+id/l"
-                    android:background="@drawable/shape_white"
+                    android:layout_marginEnd="2dp"
                     android:layout_width="60dp"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:layout_centerInParent="true"
+                    android:layout_height="90dp"
+                    android:id="@+id/Rel_Customer"
+                    >
+                    <RelativeLayout
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/Rel_Customer2"
+                        android:background="@drawable/shape_white"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp">
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_buy"/>
+                    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/Radio_Customer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_buy"/>
+                        android:layout_below="@+id/Rel_Customer2"
+                        android:layout_centerInParent="true"
+
+                        />
                 </RelativeLayout>
+
                 <RelativeLayout
-                    android:layout_marginStart="5dp"
-                    android:layout_toEndOf="@id/l"
-                    android:background="@drawable/shape_white"
+                    android:layout_marginStart="2dp"
                     android:layout_width="60dp"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:layout_centerInParent="true"
+                    android:layout_height="90dp"
+                    android:id="@+id/Rel"
+                    android:layout_toEndOf="@id/Rel_Customer"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/Rel_HandMader"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/shape_white"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp">
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_sell_icon"/>
+                    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/Radio_HandMader"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_sell_icon"/>
+                        android:layout_below="@+id/Rel_HandMader"
+                        android:layout_centerInParent="true"
+                        />
+
                 </RelativeLayout>
+
+
+
+
+
+
             </RelativeLayout>
 
 
@@ -85,6 +124,7 @@
 
 
                     <EditText
+                        android:id="@+id/Edt_UserName"
                         android:inputType="text"
                         android:theme="@style/EditTextTheme"
                         android:textSize="14sp"
@@ -95,6 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                     <EditText
+                        android:id="@+id/Edt_Email"
                         android:theme="@style/EditTextTheme"
                         android:textSize="14sp"
                         android:inputType="textEmailAddress"
@@ -105,6 +146,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                     <EditText
+                        android:id="@+id/Edt_password"
                         android:inputType="textPassword"
                         android:theme="@style/EditTextTheme"
                         android:textSize="14sp"
@@ -115,13 +157,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                     <EditText
+                        android:id="@+id/Edt_ConfPassword"
                         android:theme="@style/EditTextTheme"
                         android:textSize="14sp"
-                        android:inputType="textEmailAddress"
+                        android:inputType="textPassword"
                         android:textColor="@color/colorwhite"
                         android:hint="@string/confirmpassword"
                         android:layout_marginBottom="5dp"
-                        android:drawableStart="@drawable/ic_mail"
+                        android:drawableStart="@drawable/ic_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/Edt_Phone"
+                        android:inputType="phone"
+                        android:theme="@style/EditTextTheme"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/colorwhite"
+                        android:hint="@string/Phone"
+                        android:drawableStart="@drawable/ic_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -140,6 +195,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/Btn_Register"
         android:layout_marginBottom="5dp"
         android:layout_marginEnd="50dp"
         android:layout_alignParentEnd="true"

@@ -32,6 +32,12 @@
     <string name="search">Search</string>
     <string name="receiver_info">Receiver info.</string>
     <string name="ordered_products">Ordered Products</string>
+    <string name="PleaseEnterYourName">Please Enter Your Name</string>
+    <string name="PleaseEnterYourEmail">Enter a valid email</string>
+    <string name="PleaseEnterYourPassword">Please Enter Your Password</string>
+    <string name="PleaseConfirmYourPassword">Please Confirm Your Password</string>
+    <string name="PasswordDontMatch">Password dont match</string>
+    <string name="Phone">Phone</string>
 
 
 </resources>

@@ -1,14 +1,37 @@
 package com.example.a3zt.madeup.SharedPackage.Activity;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.a3zt.madeup.R;
+import com.example.a3zt.madeup.Remote.ApiUtlis;
+import com.example.a3zt.madeup.Remote.UserService;
+import com.example.a3zt.madeup.SharedPackage.Class.Response;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+
 
 public class RegisterActivity extends AppCompatActivity {
 
+    EditText Edt_UserName , Edt_Email , Edt_PassWord , Edt_ConfPassword , Edt_Phone ;
+    Button Register ;
+    RelativeLayout Rel_Customer , Rel_HandMader ;
+    Boolean isHandMaker ;
+    private UserService userService;
+
+    RadioButton rbCustomer , rbHandMader ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,5 +39,185 @@ public class RegisterActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_shared_register);
+        initView();
+        initComponents();
+        CheckRoll();
+        RegisterOnClick() ; 
+
     }
+
+    private void CheckRoll() {
+
+        rbHandMader.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbCustomer.setChecked(false);
+                }
+                else {
+                    rbCustomer.setChecked(true);
+                }
+            }
+        });
+
+
+        rbCustomer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    rbHandMader.setChecked(false);
+                }
+                else {
+                    rbHandMader.setChecked(true);
+                }
+            }
+        });
+
+        Rel_HandMader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rbHandMader.setChecked(true);
+            }
+        });
+        Rel_Customer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rbCustomer.setChecked(true);
+            }
+        });
+
+    }
+
+    private void initView() {
+
+        Edt_UserName = findViewById(R.id.Edt_UserName);
+        Edt_Email = findViewById(R.id.Edt_Email);
+        Edt_PassWord = findViewById(R.id.Edt_password);
+        Edt_ConfPassword = findViewById(R.id.Edt_ConfPassword);
+        Edt_Phone = findViewById(R.id.Edt_Phone);
+        Register = findViewById(R.id.Btn_Register);
+        Rel_Customer = findViewById(R.id.Rel_Customer);
+        Rel_HandMader = findViewById(R.id.Rel_HandMader);
+        rbCustomer = findViewById(R.id.Radio_Customer);
+        rbHandMader = findViewById(R.id.Radio_HandMader);
+    }
+
+
+    private void  RegisterOnClick(){
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerUser();
+            }
+        });
+    }
+
+    private void initComponents() {
+        userService = ApiUtlis.getUserService();
+    }
+
+    private void registerUser() {
+        final String UserName = Edt_UserName.getText().toString().trim();
+        final String Email = Edt_Email.getText().toString().trim();
+        final String Password = Edt_PassWord.getText().toString().trim();
+        final String ConfPassword = Edt_ConfPassword.getText().toString().trim();
+        final String Phone = Edt_Phone.getText().toString().trim();
+
+        if (TextUtils.isEmpty(UserName)){
+           Edt_UserName.setError(getResources().getString(R.string.PleaseEnterYourName));
+           Edt_UserName.requestFocus();
+           return;
+        }
+
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
+           Edt_Email.setError(getResources().getString(R.string.PleaseEnterYourEmail));
+            Edt_Email.requestFocus();
+           return;
+        }
+
+        if (TextUtils.isEmpty(Password)){
+           Edt_PassWord.setError(getResources().getString(R.string.PleaseEnterYourPassword));
+           Edt_PassWord.requestFocus();
+           return;
+        }
+
+        if (TextUtils.isEmpty(ConfPassword)){
+           Edt_ConfPassword.setError(getResources().getString(R.string.PleaseConfirmYourPassword));
+           Edt_ConfPassword.requestFocus();
+           return;
+        }
+
+        if (TextUtils.isEmpty(Phone)){
+           Edt_Phone.setError(getResources().getString(R.string.PleaseConfirmYourPassword));
+           Edt_Phone.requestFocus();
+           return;
+        }
+
+        if(!Password.equals(ConfPassword))
+        {
+            Edt_ConfPassword.setError(getResources().getString(R.string.PasswordDontMatch));
+            Edt_ConfPassword.requestFocus();
+            return;
+        }
+
+        if(rbCustomer.isChecked()){
+        callRegisterCustomer(UserName , Email , Password , Phone);
+        }else if(rbHandMader.isChecked()){
+            callRegisterHandMaker(UserName , Email , Password , Phone);
+        }else {
+            //Snackbar.make( RegisterActivity.this, "Choose Your roll" , Snackbar.LENGTH_LONG).show();
+           Toast.makeText(this, "Choose Your roll", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+    private void callRegisterCustomer(String username , String email , String password , String phone){
+        Call<Response> call=userService.RegisterCustomer(username,phone,email,password);
+        call.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                if(response.isSuccessful())
+                {
+                    if(response.body().getValue())
+                    {
+                        Toast.makeText(RegisterActivity.this, response.body().getValue()+"", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(RegisterActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void callRegisterHandMaker(String username , String email , String password , String phone){
+        Call<Response> call=userService.RegisterSeller(username,phone,email,password);
+        call.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                if(response.isSuccessful())
+                {
+                    if(response.body().getValue())
+                    {
+                        Toast.makeText(RegisterActivity.this, response.body().getValue()+"", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(RegisterActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+
+            }
+        });
+    }
+
 }

@@ -7,183 +7,220 @@
     android:layout_height="match_parent"
     tools:context=".SharedPackage.Activity.RegisterActivity">
 
+
     <include layout="@layout/layout_background"/>
 
 
-
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
+        android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5">
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_marginEnd="40dp"
-                android:layout_marginStart="40dp"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="80dp">
+            <LinearLayout
 
-                <RelativeLayout
-                    android:layout_marginEnd="2dp"
-                    android:layout_width="60dp"
-                    android:layout_height="90dp"
-                    android:id="@+id/Rel_Customer"
-                    >
-                    <RelativeLayout
-                        android:layout_marginBottom="2dp"
-                        android:id="@+id/Rel_Customer2"
-                        android:background="@drawable/shape_white"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp">
-                        <ImageView
-                            android:layout_centerInParent="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_buy"/>
-                    </RelativeLayout>
-                    <RadioButton
-                        android:id="@+id/Radio_Customer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/Rel_Customer2"
-                        android:layout_centerInParent="true"
-
-                        />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_marginStart="2dp"
-                    android:layout_width="60dp"
-                    android:layout_height="90dp"
-                    android:id="@+id/Rel"
-                    android:layout_toEndOf="@id/Rel_Customer"
-                    >
-
-                    <RelativeLayout
-                        android:id="@+id/Rel_HandMader"
-                        android:layout_marginBottom="2dp"
-                        android:background="@drawable/shape_white"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp">
-                        <ImageView
-                            android:layout_centerInParent="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_sell_icon"/>
-                    </RelativeLayout>
-                    <RadioButton
-                        android:id="@+id/Radio_HandMader"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/Rel_HandMader"
-                        android:layout_centerInParent="true"
-                        />
-
-                </RelativeLayout>
-
-
-
-
-
-
-            </RelativeLayout>
-
-
-
-        </RelativeLayout>
-
-
-
-
- <android.support.v7.widget.CardView
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                app:cardCornerRadius="20dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:background="@drawable/shape_raduis"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="300dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:gravity="bottom">
+
+                    <RelativeLayout
+                        android:id="@+id/Rel_Customer"
+                        android:layout_width="60dp"
+                        android:layout_height="90dp">
+
+                        <RelativeLayout
+                            android:id="@+id/Rel_Customer2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/shape_white">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_buy" />
+                        </RelativeLayout>
+
+                        <RadioButton
+                            android:id="@+id/Radio_Customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Rel_Customer2"
+                            android:layout_centerInParent="true"
+
+                            />
+                    </RelativeLayout>
+
+                    <Space
+                        android:id="@+id/s"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_toEndOf="@+id/Rel_Customer" />
+
+                    <RelativeLayout
+                        android:id="@+id/Rel"
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                        android:layout_toEndOf="@id/s">
+
+                        <RelativeLayout
+                            android:id="@+id/Rel_HandMader"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/shape_white">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_sell_icon" />
+                        </RelativeLayout>
+
+                        <RadioButton
+                            android:id="@+id/Radio_HandMader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Rel_HandMader"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
 
 
-                    <EditText
-                        android:id="@+id/Edt_UserName"
-                        android:inputType="text"
-                        android:theme="@style/EditTextTheme"
-                        android:textSize="14sp"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/colorwhite"
-                        android:hint="@string/username"
-                        android:drawableStart="@drawable/ic_password"
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/e"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:cardCornerRadius="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                    <EditText
-                        android:id="@+id/Edt_Email"
-                        android:theme="@style/EditTextTheme"
-                        android:textSize="14sp"
-                        android:inputType="textEmailAddress"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingBottom="30dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:background="@drawable/shape_raduis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <EditText
+                                android:id="@+id/Edt_UserName"
+                                android:inputType="text"
+                                android:theme="@style/EditTextTheme"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/colorwhite"
+                                android:hint="@string/username"
+                                android:drawableStart="@drawable/ic_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:id="@+id/Edt_Email"
+                                android:theme="@style/EditTextTheme"
+                                android:textSize="14sp"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/colorwhite"
+                                android:hint="@string/mail"
+                                android:layout_marginBottom="5dp"
+                                android:drawableStart="@drawable/ic_mail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:id="@+id/Edt_password"
+                                android:inputType="textPassword"
+                                android:theme="@style/EditTextTheme"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/colorwhite"
+                                android:hint="@string/password"
+                                android:drawableStart="@drawable/ic_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:id="@+id/Edt_ConfPassword"
+                                android:theme="@style/EditTextTheme"
+                                android:textSize="14sp"
+                                android:inputType="textPassword"
+                                android:textColor="@color/colorwhite"
+                                android:hint="@string/confirmpassword"
+                                android:layout_marginBottom="5dp"
+                                android:drawableStart="@drawable/ic_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <EditText
+                                android:id="@+id/Edt_Phone"
+                                android:inputType="phone"
+                                android:theme="@style/EditTextTheme"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/colorwhite"
+                                android:hint="@string/Phone"
+                                android:drawableStart="@drawable/ic_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:layout_alignBottom="@+id/e"
+                        android:layout_marginBottom="-15dp"
+                        android:id="@+id/Btn_Register"
+                        android:drawableEnd="@drawable/ic_login"
                         android:textColor="@color/colorwhite"
-                        android:hint="@string/mail"
-                        android:layout_marginBottom="5dp"
-                        android:drawableStart="@drawable/ic_mail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                    <EditText
-                        android:id="@+id/Edt_password"
-                        android:inputType="textPassword"
-                        android:theme="@style/EditTextTheme"
-                        android:textSize="14sp"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/colorwhite"
-                        android:hint="@string/password"
-                        android:drawableStart="@drawable/ic_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                    <EditText
-                        android:id="@+id/Edt_ConfPassword"
-                        android:theme="@style/EditTextTheme"
-                        android:textSize="14sp"
-                        android:inputType="textPassword"
-                        android:textColor="@color/colorwhite"
-                        android:hint="@string/confirmpassword"
-                        android:layout_marginBottom="5dp"
-                        android:drawableStart="@drawable/ic_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/shape_button"
+                        android:text="@string/register"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
 
-                    <EditText
-                        android:id="@+id/Edt_Phone"
-                        android:inputType="phone"
-                        android:theme="@style/EditTextTheme"
-                        android:textSize="14sp"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/colorwhite"
-                        android:hint="@string/Phone"
-                        android:drawableStart="@drawable/ic_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
+                </RelativeLayout>
 
 
 
@@ -192,27 +229,16 @@
 
 
 
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/Btn_Register"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:drawableEnd="@drawable/ic_login"
-        android:textColor="@color/colorwhite"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textAlignment="center"
-        android:background="@drawable/shape_button"
-        android:text="@string/register"
-        android:layout_alignEnd="@id/P"
-        android:layout_alignBottom="@id/P"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
 
 
 

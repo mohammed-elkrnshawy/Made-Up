@@ -40,7 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_shared_register);
         initView();
-        initComponents();
         CheckRoll();
         RegisterOnClick() ; 
 
@@ -112,6 +111,9 @@ public class RegisterActivity extends AppCompatActivity {
         Rel_HandMader = findViewById(R.id.Rel_HandMader);
         rbCustomer = findViewById(R.id.Radio_Customer);
         rbHandMader = findViewById(R.id.Radio_HandMader);
+
+
+        userService = ApiUtlis.getUserService();
     }
 
 
@@ -124,9 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void initComponents() {
-        userService = ApiUtlis.getUserService();
-    }
+
 
     private void registerUser() {
         final String UserName = Edt_UserName.getText().toString().trim();

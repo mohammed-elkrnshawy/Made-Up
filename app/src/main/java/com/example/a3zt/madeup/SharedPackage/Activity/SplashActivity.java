@@ -30,13 +30,13 @@ public class SplashActivity extends AppCompatActivity {
         new CountDownTimer(1000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                LanguageType languageType=new LanguageType();
+                /*LanguageType languageType=new LanguageType();
                 languageType.languageType = "arabic";
                 PrefUtils.setLanguage(languageType, SplashActivity.this);
                 Log.e("Selected language", PrefUtils.getLanguage(SplashActivity.this).languageType);
                 Configuration config = new Configuration();
                 config.locale = new Locale("ar");
-                getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+                getResources().updateConfiguration(config, getResources().getDisplayMetrics());*/
             }
 
             public void onFinish() {

@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_shared_login);
         InitComponent();
-        initComponents();
+
         loginOnClick();
 
 
@@ -46,25 +46,25 @@ public class LoginActivity extends AppCompatActivity {
         Login=findViewById(R.id.bt_login);
         Edt_Email = findViewById(R.id.Edt_Login_Email);
         Edt_Password = findViewById(R.id.Edt_Login_Password);
-    }
 
-    private void initComponents() {
+
+
         userService = ApiUtlis.getUserService();
     }
+
+
 
     private void loginOnClick(){
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser();
+                loginUser(Edt_Email.getText().toString().trim(),Edt_Password.getText().toString().trim());
 
             }
         });
     }
 
-    private void loginUser() {
-        final  String Email = Edt_Email.getText().toString().trim() ;
-        final  String Password = Edt_Password.getText().toString().trim() ;
+    private void loginUser(String Email,String Password) {
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
             Edt_Email.setError(getResources().getString(R.string.PleaseEnterYourEmail));
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(response.body().getValue())
                     {
                         startActivity(new Intent(LoginActivity.this, SellerHomeActivity.class));
-                        Toast.makeText(LoginActivity.this, response.body().getValue()+"", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, response.body().getData().getToken(), Toast.LENGTH_SHORT).show();
                     }
                     else {
                         Toast.makeText(LoginActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();

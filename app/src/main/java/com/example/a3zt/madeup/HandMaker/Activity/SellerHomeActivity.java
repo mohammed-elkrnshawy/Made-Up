@@ -19,8 +19,9 @@ import com.example.a3zt.madeup.R;
 
 public class SellerHomeActivity extends AppCompatActivity {
 
-    private ActionBar toolbar;
-    BottomNavigationView bnavigate ;
+
+    BottomNavigationView bnavigate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,51 +29,50 @@ public class SellerHomeActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_saller_home);
-        init();
 
-        bnavigate = (BottomNavigationView) findViewById(R.id.navigation);
+        InitComponent();
+
+
+
+
+       /* toolbar = getSupportActionBar();
+        toolbar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+        toolbar.setTitle("Products");*/
+
+    }
+
+    public void InitComponent() {
+        bnavigate = findViewById(R.id.navigation);
         bnavigate.setSelectedItemId(R.id.Nav_Products);
         loadFragment(new ProductsFragment());
         bnavigate.setOnNavigationItemSelectedListener(mItemSelected);
-        toolbar = getSupportActionBar();
-        toolbar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-
-        toolbar.setTitle("Products");
-
     }
 
-    public void init(){
-        toolbar = getSupportActionBar() ;
-    }
+    private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected = new BottomNavigationView.OnNavigationItemSelectedListener() {
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment = null;
+            switch (item.getItemId()) {
 
+                case R.id.Nav_Products:
+                    fragment = new ProductsFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.Nav_Profile:
+                    fragment = new ProfileFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.Nav_Sales:
+                    fragment = new SalesFragment();
+                    loadFragment(fragment);
+                    return true;
+            }
 
-        Fragment fragment = null ;
-        switch (item.getItemId()){
-
-            case  R.id.Nav_Products :
-                toolbar.setTitle(R.string.products);
-                fragment = new ProductsFragment();
-                loadFragment(fragment);
-                return true;
-            case  R.id.Nav_Profile :
-                toolbar.setTitle(R.string.profile);
-                fragment= new ProfileFragment();
-                loadFragment(fragment);
-                return true;
-            case  R.id.Nav_Sales :
-                toolbar.setTitle(R.string.sales);
-                fragment = new SalesFragment();
-                loadFragment(fragment);
-                return true;
+            return false;
         }
-
-        return false;
-    }
-  };
+    };
 
     private void loadFragment(Fragment fragment) {
         // load fragment

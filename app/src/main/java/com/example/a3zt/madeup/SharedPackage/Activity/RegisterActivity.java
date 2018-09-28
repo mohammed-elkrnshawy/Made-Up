@@ -1,5 +1,8 @@
 package com.example.a3zt.madeup.SharedPackage.Activity;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.a3zt.madeup.HandMaker.Activity.SellerHomeActivity;
 import com.example.a3zt.madeup.R;
 import com.example.a3zt.madeup.Remote.ApiUtlis;
 import com.example.a3zt.madeup.Remote.UserService;
@@ -25,13 +29,12 @@ import retrofit2.Callback;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText Edt_UserName , Edt_Email , Edt_PassWord , Edt_ConfPassword , Edt_Phone ;
-    Button Register ;
-    RelativeLayout Rel_Customer , Rel_HandMader ;
-    Boolean isHandMaker ;
+    private Dialog progressDialog;
+    private EditText Edt_UserName , Edt_Email , Edt_PassWord , Edt_ConfPassword , Edt_Phone ;
+    private Button Register ;
+    private RelativeLayout Rel_Customer , Rel_HandMader ;
     private UserService userService;
-
-    RadioButton rbCustomer , rbHandMader ;
+    private RadioButton rbCustomer , rbHandMader ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_shared_register);
+
         initView();
         CheckRoll();
         RegisterOnClick() ; 
@@ -185,6 +189,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private void callRegisterCustomer(String username , String email , String password , String phone){
+        ShowWaiting();
         Call<Response> call=userService.RegisterCustomer(username,phone,email,password);
         call.enqueue(new Callback<Response>() {
             @Override
@@ -193,22 +198,30 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     if(response.body().getValue())
                     {
-                        Toast.makeText(RegisterActivity.this, response.body().getValue()+"", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                        //
                     }
                     else {
+                        progressDialog.dismiss();
                         Toast.makeText(RegisterActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
                     }
+                }
+                else {
+                    progressDialog.dismiss();
+                    Toast.makeText(RegisterActivity.this, response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Response> call, Throwable t) {
-
+                progressDialog.dismiss();
+                Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void callRegisterHandMaker(String username , String email , String password , String phone){
+        ShowWaiting();
         Call<Response> call=userService.RegisterSeller(username,phone,email,password);
         call.enqueue(new Callback<Response>() {
             @Override
@@ -217,19 +230,36 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     if(response.body().getValue())
                     {
-                        Toast.makeText(RegisterActivity.this, response.body().getValue()+"", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                        startActivity(new Intent(RegisterActivity.this, SellerHomeActivity.class));
                     }
                     else {
+                        progressDialog.dismiss();
                         Toast.makeText(RegisterActivity.this, response.body().getMsg(), Toast.LENGTH_SHORT).show();
                     }
+                }
+                else {
+                    progressDialog.dismiss();
+                    Toast.makeText(RegisterActivity.this, response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<Response> call, Throwable t) {
-
+                progressDialog.dismiss();
+                Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    private void ShowWaiting()
+    {
+        progressDialog= new Dialog(this);
+        progressDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        progressDialog.setContentView(R.layout.view_dialog);
+        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        progressDialog.setCancelable(true);
+
+        progressDialog.show();
+    }
 }

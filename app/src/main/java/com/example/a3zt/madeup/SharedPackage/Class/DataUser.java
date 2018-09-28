@@ -7,7 +7,7 @@ public class DataUser {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private String id;
     @SerializedName("name")
     @Expose
     private String name;
@@ -20,15 +20,21 @@ public class DataUser {
     @SerializedName("image")
     @Expose
     private Object image;
+    @SerializedName("role")
+    @Expose
+    private Object role;
     @SerializedName("token")
     @Expose
     private String token;
+    @SerializedName("gender")
+    @Expose
+    private Object gender;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -64,12 +70,28 @@ public class DataUser {
         this.image = image;
     }
 
+    public Object getRole() {
+        return role;
+    }
+
+    public void setRole(Object role) {
+        this.role = role;
+    }
+
     public String getToken() {
         return token;
     }
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public Object getGender() {
+        return gender;
+    }
+
+    public void setGender(Object gender) {
+        this.gender = gender;
     }
 
 }

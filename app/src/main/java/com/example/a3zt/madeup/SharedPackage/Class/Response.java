@@ -15,6 +15,7 @@ public class Response {
     @Expose
     private String msg;
 
+
     public Boolean getValue() {
         return value;
     }

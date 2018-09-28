@@ -20,7 +20,7 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="#ff153057"
             android:alpha=".9">
         </View>
     </RelativeLayout>

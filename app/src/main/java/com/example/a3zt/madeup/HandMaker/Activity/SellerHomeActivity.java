@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -25,6 +27,7 @@ import com.example.a3zt.madeup.SharedPackage.Class.DataUser;
 public class SellerHomeActivity extends AppCompatActivity {
 
 
+    private FloatingActionButton fab;
     private BottomNavigationView bnavigate;
     private DataUser user;
     private String UserID,UserToken;
@@ -41,8 +44,11 @@ public class SellerHomeActivity extends AppCompatActivity {
 
         SharedPreferencesRead();
 
+        loadFragment(new ProductsFragment(UserID,UserToken));
 
+        getUserData();
 
+        fabClick();
 
 
     }
@@ -50,8 +56,8 @@ public class SellerHomeActivity extends AppCompatActivity {
     public void InitComponent() {
         bnavigate = findViewById(R.id.navigation);
         bnavigate.setSelectedItemId(R.id.Nav_Products);
-        loadFragment(new ProductsFragment());
         bnavigate.setOnNavigationItemSelectedListener(mItemSelected);
+        fab=findViewById(R.id.addProduct);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected
@@ -63,7 +69,7 @@ public class SellerHomeActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.Nav_Products:
-                    fragment = new ProductsFragment();
+                    fragment = new ProductsFragment(UserID,UserToken);
                     loadFragment(fragment);
                     return true;
                 case R.id.Nav_Profile:
@@ -100,5 +106,23 @@ public class SellerHomeActivity extends AppCompatActivity {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         }
+
+    }
+
+    private void getUserData()
+    {
+
+    }
+
+    private void fabClick()
+    {
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentAddProduct=new Intent(SellerHomeActivity.this,Activity_AddProduct.class);
+                intentAddProduct.putExtra("user",user);
+                startActivity(intentAddProduct);
+            }
+        });
     }
 }

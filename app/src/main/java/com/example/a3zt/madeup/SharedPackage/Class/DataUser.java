@@ -3,7 +3,9 @@ package com.example.a3zt.madeup.SharedPackage.Class;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class DataUser {
+import java.io.Serializable;
+
+public class DataUser implements Serializable {
 
     @SerializedName("id")
     @Expose

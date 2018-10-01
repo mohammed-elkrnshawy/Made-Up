@@ -3,6 +3,7 @@ package com.example.a3zt.madeup.SharedPackage.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import com.example.a3zt.madeup.Remote.ApiUtlis;
 import com.example.a3zt.madeup.Remote.UserService;
 import com.example.a3zt.madeup.SharedPackage.Class.Response;
 import com.example.a3zt.madeup.SharedPackage.Class.SharedParameter;
+
+import java.util.IdentityHashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -97,14 +100,14 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     if(response.body().getValue())
                     {
+                        SharedPreferencesPut(response.body().getData().getId()
+                                ,response.body().getData().getToken(),true);
                         if (response.body().getData().getRole().equals( SharedParameter.Customer))
                         {
-                            Toast.makeText(LoginActivity.this, "customer", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this, SellerHomeActivity.class));
                         }
                         else if (response.body().getData().getRole().equals(SharedParameter.Supplier))
                         {
-                            Toast.makeText(LoginActivity.this, "seller", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this, SellerHomeActivity.class));
                         }
                         progressDialog.dismiss();
@@ -137,4 +140,14 @@ public class LoginActivity extends AppCompatActivity {
 
         progressDialog.show();
     }
+
+    private void SharedPreferencesPut(String ID,String Token,boolean Login)
+    {
+        SharedPreferences.Editor editor = getSharedPreferences(getApplication().getPackageName(), MODE_PRIVATE).edit();
+        editor.putString("id", ID);
+        editor.putString("token", Token);
+        editor.putBoolean("isLogin", Login);
+        editor.apply();
+    }
+
 }

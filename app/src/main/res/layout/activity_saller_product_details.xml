@@ -23,7 +23,6 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-
             android:paddingBottom="3dp"
             android:paddingRight="30dp"
 
@@ -70,15 +69,14 @@
        >
        <RelativeLayout
            android:layout_width="match_parent"
-           android:layout_height="match_parent"
-
-           >
+           android:layout_height="match_parent">
 
            <TextView
+               android:padding="10dp"
                android:id="@+id/txtProductName"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_marginTop="15dp"
+               android:layout_marginTop="10dp"
                android:textSize="16sp"
                android:gravity="center"
                android:textAlignment="center"
@@ -98,7 +96,7 @@
                />
 
            <RatingBar
-               style="@style/Base.Widget.AppCompat.RatingBar.Small"
+               style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
                android:id="@+id/RateProduct"
                android:min="0"
                android:max="5"
@@ -110,6 +108,7 @@
                android:progressTint="@color/colorYellow"
 
                />
+
 
        </RelativeLayout>
    </ScrollView>

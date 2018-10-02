@@ -38,36 +38,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-
-
-                android:text="L.E."
-                android:textSize="17dp"
+                android:text="@string/coins"
+                android:textSize="14sp"
                 android:textColor="@color/colorwhite"
                 />
             <TextView
+                android:layout_alignParentBottom="true"
                 android:id="@+id/txtPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
-
                 android:text="00"
-                android:textSize="25dp"
+                android:textSize="14sp"
                 android:textColor="@color/colorwhite"
                 />
         </RelativeLayout>
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/back"
-            android:text="@string/back"
-            android:background="?android:attr/selectableItemBackground"
-            android:textSize="18dp"
-            android:textColor="@color/colorwhite"
-            android:padding="8dp"
-            />
 
     </RelativeLayout>
     <View
@@ -88,13 +75,12 @@
            >
 
            <TextView
-               android:id="@+id/txtProductName_Details"
+               android:id="@+id/txtProductName"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_marginTop="25dp"
-               android:textSize="18sp"
+               android:layout_marginTop="15dp"
+               android:textSize="16sp"
                android:gravity="center"
-
                android:textAlignment="center"
                android:text="@string/product_name"
                android:textColor="@color/colorBlack"
@@ -104,15 +90,17 @@
                android:id="@+id/view"
                android:layout_width="match_parent"
                android:layout_height="1dp"
-               android:layout_below="@+id/txtProductName_Details"
+               android:layout_below="@+id/txtProductName"
                android:layout_marginTop="10dp"
-               android:layout_margin="15dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginEnd="15dp"
                android:background="@color/colorview"
                />
 
            <RatingBar
+               style="@style/Base.Widget.AppCompat.RatingBar.Small"
                android:id="@+id/RateProduct"
-               android:min="1"
+               android:min="0"
                android:max="5"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -121,27 +109,6 @@
                android:layout_centerInParent="true"
                android:progressTint="@color/colorYellow"
 
-               />
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/view"
-               android:layout_marginRight="30dp"
-               android:layout_alignParentRight="true"
-               android:text="0.0"
-               android:textSize="26sp"
-               android:layout_marginTop="5dp"
-               />
-           <TextView
-               android:id="@+id/productDescription"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/RateProduct"
-               android:drawableLeft="@drawable/desc"
-               android:padding="10dp"
-               android:textSize="22dp"
-               android:text=""
                />
 
        </RelativeLayout>

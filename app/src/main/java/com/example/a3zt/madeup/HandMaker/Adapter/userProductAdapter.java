@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.a3zt.madeup.HandMaker.Activity.Activity_ProductDetails;
 import com.example.a3zt.madeup.R;
 import com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts.Image;
 import com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts.Product;
@@ -36,14 +38,12 @@ public class userProductAdapter extends RecyclerView.Adapter<userProductAdapter.
 
         public TextView txtProductName,txtPrice;
         public ImageView imgProduct;
-        public CardView sellerCardView;
 
         public MyViewHolder(View view) {
             super(view);
             txtPrice=view.findViewById(R.id.txtPrice);
             txtProductName =  view.findViewById(R.id.txtProductName);
             imgProduct =  view.findViewById(R.id.imgProduct);
-            sellerCardView=view.findViewById(R.id.sellerCardView);
         }
     }
 
@@ -101,19 +101,15 @@ public class userProductAdapter extends RecyclerView.Adapter<userProductAdapter.
         }
 
 
-        /*holder.relativeLayoutParent.setOnClickListener(new View.OnClickListener() {
+        holder.imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // SharedParameters.DoctorUid=album.DoctorID;
-              //  Toast.makeText(mContext, album.DoctorID, Toast.LENGTH_SHORT).show();
-             //  mContext.startActivity(new Intent(mContext,PatientViewDoctorActivity.class));
-                        Intent intent=new Intent(mContext,PatientViewDoctorActivity.class);
-                        intent.putExtra("Patient ID",aClass.PatientID);
-                        intent.putExtra("Doctor ID",album.DoctorID);
-                        intent.putExtra("Patient Name",aClass.PatientName);
+                Toast.makeText(mContext, "", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(mContext,Activity_ProductDetails.class);
+                        intent.putExtra("product",album);
                         mContext.startActivity(intent);
             }
-        });*/
+        });
 
     }
 

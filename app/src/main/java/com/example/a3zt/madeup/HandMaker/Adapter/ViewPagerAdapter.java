@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts.Image;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -15,10 +16,9 @@ import java.util.List;
 public class ViewPagerAdapter extends PagerAdapter {
 
    private Context context ;
-   //private LayoutInflater inflater ;
-   private List<String> Images ;
+   private List<Image> Images ;
 
-    public ViewPagerAdapter(Context context, List<String> images) {
+    public ViewPagerAdapter(Context context, List<Image> images) {
         this.context = context;
         Images = images;
     }
@@ -38,8 +38,9 @@ public class ViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         ImageView imageView = new ImageView(context);
+        
         Picasso.get()
-                .load(Images.get(position))
+                .load(Images.get(position).getImage())
                 .fit()
                 .into(imageView);
         container.addView(imageView);

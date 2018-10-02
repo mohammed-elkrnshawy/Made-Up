@@ -38,12 +38,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/yourName"
-            android:maxLength="16"
             android:layout_below="@+id/relPhoto"
             android:layout_centerInParent="true"
             android:layout_marginTop="15dp"
             android:textColor="@color/colorwhite"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
     </RelativeLayout>
     

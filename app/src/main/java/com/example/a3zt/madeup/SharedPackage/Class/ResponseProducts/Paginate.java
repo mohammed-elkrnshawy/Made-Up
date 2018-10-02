@@ -3,7 +3,9 @@ package com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Paginate {
+import java.io.Serializable;
+
+public class Paginate implements Serializable {
 
     @SerializedName("total")
     @Expose

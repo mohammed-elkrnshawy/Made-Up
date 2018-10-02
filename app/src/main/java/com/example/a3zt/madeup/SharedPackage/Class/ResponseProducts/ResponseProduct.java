@@ -3,7 +3,9 @@ package com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseProduct {
+import java.io.Serializable;
+
+public class ResponseProduct implements Serializable {
 
     @SerializedName("value")
     @Expose

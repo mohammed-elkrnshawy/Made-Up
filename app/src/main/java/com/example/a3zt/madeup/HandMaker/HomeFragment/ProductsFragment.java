@@ -49,10 +49,9 @@ public class ProductsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view= inflater.inflate(R.layout.fragment_seller_products , container , false) ;
 
-
         InitComponent();
 
-       callUserProduct();
+        callUserProduct();
 
         return view;
     }

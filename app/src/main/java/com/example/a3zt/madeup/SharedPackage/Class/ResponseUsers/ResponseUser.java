@@ -1,9 +1,9 @@
-package com.example.a3zt.madeup.SharedPackage.Class;
+package com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Response {
+public class ResponseUser {
 
     @SerializedName("value")
     @Expose

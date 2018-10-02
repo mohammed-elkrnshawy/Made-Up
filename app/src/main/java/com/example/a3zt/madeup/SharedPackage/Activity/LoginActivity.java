@@ -1,13 +1,13 @@
 package com.example.a3zt.madeup.SharedPackage.Activity;
 
 import android.app.Dialog;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,10 +19,8 @@ import com.example.a3zt.madeup.HandMaker.Activity.SellerHomeActivity;
 import com.example.a3zt.madeup.R;
 import com.example.a3zt.madeup.Remote.ApiUtlis;
 import com.example.a3zt.madeup.Remote.UserService;
-import com.example.a3zt.madeup.SharedPackage.Class.Response;
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers.ResponseUser;
 import com.example.a3zt.madeup.SharedPackage.Class.SharedParameter;
-
-import java.util.IdentityHashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -92,23 +90,25 @@ public class LoginActivity extends AppCompatActivity {
 
     private void callLogin(String email , String password) {
         ShowWaiting();
-        Call<Response> call = userService.Login(email, password);
-        call.enqueue(new Callback<Response>() {
+        Call<ResponseUser> call = userService.Login(email, password);
+        call.enqueue(new Callback<ResponseUser>() {
             @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+            public void onResponse(Call<ResponseUser> call, retrofit2.Response<ResponseUser> response) {
                 if(response.isSuccessful())
                 {
                     if(response.body().getValue())
                     {
+                        Log.d("AAAAAA",response.body().getData().getToken());
                         SharedPreferencesPut(response.body().getData().getId()
                                 ,response.body().getData().getToken(),true);
                         if (response.body().getData().getRole().equals( SharedParameter.Customer))
                         {
-                            startActivity(new Intent(LoginActivity.this, SellerHomeActivity.class));
                         }
                         else if (response.body().getData().getRole().equals(SharedParameter.Supplier))
                         {
-                            startActivity(new Intent(LoginActivity.this, SellerHomeActivity.class));
+                            Intent sellerHome=new Intent(LoginActivity.this, SellerHomeActivity.class);
+                            sellerHome.putExtra("user",response.body().getData());
+                            startActivity(sellerHome);
                         }
                         progressDialog.dismiss();
                     }
@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Response> call, Throwable t) {
+            public void onFailure(Call<ResponseUser> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }

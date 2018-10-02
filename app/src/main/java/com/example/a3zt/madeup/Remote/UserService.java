@@ -1,7 +1,6 @@
 package com.example.a3zt.madeup.Remote;
-import com.example.a3zt.madeup.SharedPackage.Class.Response;
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers.ResponseUser;
 import com.example.a3zt.madeup.SharedPackage.Class.ResponseProducts.ResponseProduct;
-import com.example.a3zt.madeup.SharedPackage.Class.SharedParameter;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -15,7 +14,7 @@ public interface UserService {
 
 
     @POST("auth/register/customer")
-    Call<Response> RegisterCustomer(
+    Call<ResponseUser> RegisterCustomer(
             @Query("name") String name ,
             @Query("phone") String phone ,
             @Query("email") String email ,
@@ -24,7 +23,7 @@ public interface UserService {
 
 
  @POST("auth/register/seller")
-    Call<Response> RegisterSeller(
+    Call<ResponseUser> RegisterSeller(
             @Query("name") String name ,
             @Query("phone") String phone ,
             @Query("email") String email ,
@@ -32,7 +31,7 @@ public interface UserService {
     );
 
  @POST("auth/login")
-    Call<Response> Login(
+    Call<ResponseUser> Login(
             @Query("email") String email ,
             @Query("password") String password
  );
@@ -44,6 +43,13 @@ public interface UserService {
             @Path("id") String userID,
             @Header("Authorization") String Token,
             @Header("X-localization") String Localization
+    );
+
+
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    @GET("profile")
+    Call<ResponseUser> userProfile(
+            @Header("Authorization") String Token
     );
 
 }

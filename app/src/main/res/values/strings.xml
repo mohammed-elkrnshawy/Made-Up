@@ -38,6 +38,7 @@
     <string name="PleaseConfirmYourPassword">Please Confirm Your Password</string>
     <string name="PasswordDontMatch">Password dont match</string>
     <string name="Phone">Phone</string>
+    <string name="coins">L.E</string>
 
 
 </resources>

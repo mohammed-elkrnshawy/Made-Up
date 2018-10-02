@@ -1,4 +1,4 @@
-package com.example.a3zt.madeup.SharedPackage.Class;
+package com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

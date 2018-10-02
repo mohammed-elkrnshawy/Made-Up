@@ -7,10 +7,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -21,16 +19,25 @@ import com.example.a3zt.madeup.HandMaker.HomeFragment.ProductsFragment;
 import com.example.a3zt.madeup.HandMaker.HomeFragment.ProfileFragment;
 import com.example.a3zt.madeup.HandMaker.HomeFragment.SalesFragment;
 import com.example.a3zt.madeup.R;
+import com.example.a3zt.madeup.Remote.ApiUtlis;
+import com.example.a3zt.madeup.Remote.UserService;
 import com.example.a3zt.madeup.SharedPackage.Activity.LoginActivity;
-import com.example.a3zt.madeup.SharedPackage.Class.DataUser;
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers.DataUser;
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers.ResponseUser;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SellerHomeActivity extends AppCompatActivity {
 
-
+    private UserService userService;
     private FloatingActionButton fab;
     private BottomNavigationView bnavigate;
     private DataUser user;
-    private String UserID,UserToken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +48,6 @@ public class SellerHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_saller_home);
 
         InitComponent();
-
-        SharedPreferencesRead();
-
-        loadFragment(new ProductsFragment(UserID,UserToken));
 
         getUserData();
 
@@ -58,8 +61,24 @@ public class SellerHomeActivity extends AppCompatActivity {
         bnavigate.setSelectedItemId(R.id.Nav_Products);
         bnavigate.setOnNavigationItemSelectedListener(mItemSelected);
         fab=findViewById(R.id.addProduct);
+
+
+        //region ImageLoader
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .build();
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
+                .defaultDisplayImageOptions(defaultOptions)
+                .build();
+        ImageLoader.getInstance().init(config);
+        //endregion
+
+
+        userService = ApiUtlis.getUserService();
     }
 
+    //region Navbar
     private BottomNavigationView.OnNavigationItemSelectedListener mItemSelected
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -69,11 +88,11 @@ public class SellerHomeActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.Nav_Products:
-                    fragment = new ProductsFragment(UserID,UserToken);
+                    fragment = new ProductsFragment(user);
                     loadFragment(fragment);
                     return true;
                 case R.id.Nav_Profile:
-                    fragment = new ProfileFragment();
+                    fragment = new ProfileFragment(user);
                     loadFragment(fragment);
                     return true;
                 case R.id.Nav_Sales:
@@ -85,6 +104,7 @@ public class SellerHomeActivity extends AppCompatActivity {
             return false;
         }
     };
+    //endregion
 
     private void loadFragment(Fragment fragment) {
         // load fragment
@@ -94,24 +114,14 @@ public class SellerHomeActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-    private void SharedPreferencesRead()
-    {
-        SharedPreferences prefs = getSharedPreferences(getApplication().getPackageName(), MODE_PRIVATE);
-        boolean isLoggin = prefs.getBoolean("isLogin", false);
-        if (isLoggin) {
-            UserID=prefs.getString("id", null);
-            UserToken=prefs.getString("token", null);
-        }
-        else {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
-        }
-
-    }
-
     private void getUserData()
     {
-
+        Bundle bundle=getIntent().getExtras();
+        if(bundle!=null)
+        {
+            user=(DataUser) bundle.get("user");
+            loadFragment(new ProductsFragment(user));
+        }
     }
 
     private void fabClick()

@@ -3,7 +3,6 @@ package com.example.a3zt.madeup.SharedPackage.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -21,7 +20,7 @@ import com.example.a3zt.madeup.HandMaker.Activity.SellerHomeActivity;
 import com.example.a3zt.madeup.R;
 import com.example.a3zt.madeup.Remote.ApiUtlis;
 import com.example.a3zt.madeup.Remote.UserService;
-import com.example.a3zt.madeup.SharedPackage.Class.Response;
+import com.example.a3zt.madeup.SharedPackage.Class.ResponseUsers.ResponseUser;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -190,10 +189,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void callRegisterCustomer(String username , String email , String password , String phone){
         ShowWaiting();
-        Call<Response> call=userService.RegisterCustomer(username,phone,email,password);
-        call.enqueue(new Callback<Response>() {
+        Call<ResponseUser> call=userService.RegisterCustomer(username,phone,email,password);
+        call.enqueue(new Callback<ResponseUser>() {
             @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+            public void onResponse(Call<ResponseUser> call, retrofit2.Response<ResponseUser> response) {
                 if(response.isSuccessful())
                 {
                     if(response.body().getValue())
@@ -213,7 +212,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Response> call, Throwable t) {
+            public void onFailure(Call<ResponseUser> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
@@ -222,10 +221,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void callRegisterHandMaker(String username , String email , String password , String phone){
         ShowWaiting();
-        Call<Response> call=userService.RegisterSeller(username,phone,email,password);
-        call.enqueue(new Callback<Response>() {
+        Call<ResponseUser> call=userService.RegisterSeller(username,phone,email,password);
+        call.enqueue(new Callback<ResponseUser>() {
             @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+            public void onResponse(Call<ResponseUser> call, retrofit2.Response<ResponseUser> response) {
                 if(response.isSuccessful())
                 {
                     if(response.body().getValue())
@@ -245,7 +244,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Response> call, Throwable t) {
+            public void onFailure(Call<ResponseUser> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(RegisterActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }

@@ -31,7 +31,7 @@
             android:layout_centerInParent="true"
             android:src="@drawable/me"
             app:civ_border_width="1dp"
-            app:civ_border_color="@color/colorOrangDark"
+            app:civ_border_color="@color/colorPrimary"
             />
         </RelativeLayout>
         <TextView
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/relContainer"
         android:layout_centerHorizontal="true"
-        android:progressTint="@color/colorOrangDark"
+        android:progressTint="@color/colorPrimary"
         style="?android:attr/ratingBarStyleSmall"
         android:layout_marginTop="10dp"
 
@@ -81,7 +81,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="30"
                 android:textSize="30sp"
-                android:textColor="@color/colorOrangDark"
+                android:textColor="@color/colorPrimary"
                 />
 
             <RelativeLayout
@@ -129,7 +129,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="30"
                 android:textSize="30sp"
-                android:textColor="@color/colorOrangDark"
+                android:textColor="@color/colorPrimary"
                 />
 
             <RelativeLayout
@@ -175,7 +175,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="30"
                 android:textSize="30sp"
-                android:textColor="@color/colorOrangDark"
+                android:textColor="@color/colorPrimary"
                 />
 
             <RelativeLayout

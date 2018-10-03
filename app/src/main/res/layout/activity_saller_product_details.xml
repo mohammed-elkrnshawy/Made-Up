@@ -105,7 +105,7 @@
                android:layout_below="@+id/view"
                android:numStars="5"
                android:layout_centerInParent="true"
-               android:progressTint="@color/colorYellow"
+               android:progressTint="@color/colorPrimary"
 
                />
 

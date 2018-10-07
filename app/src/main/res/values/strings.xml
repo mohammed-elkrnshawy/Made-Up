@@ -38,13 +38,10 @@
     <string name="PleaseConfirmYourPassword">Please Confirm Your Password</string>
     <string name="PasswordDontMatch">Password dont match</string>
     <string name="Phone">Phone</string>
-<<<<<<< HEAD
     <string name="coins">L.E</string>
-=======
     <string name="add">add</string>
     <string name="required">required</string>
 
->>>>>>> 1fcc1e4a516d009d1ce2641a0880c83b117893f1
 
 
 </resources>

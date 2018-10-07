@@ -5,15 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
     android:background="@color/colorPrimary"
     tools:context=".HandMaker.Activity.Activity_AddProduct">
-
-
-=======
-    android:background="@color/colorwhite"
-    tools:context=".HandMaker.Activity.Activity_AddProduct">
-
 
 
 

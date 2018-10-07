@@ -23,7 +23,6 @@
                 <activity android:name=".HandMaker.Activity.SellerHomeActivity"/>
                 <activity android:name=".HandMaker.Activity.Activity_ProductDetails" />
                 <activity android:name=".HandMaker.Activity.Activity_AddProduct" >
-
                 </activity>
                 <activity android:name=".HandMaker.Activity.Activity_Profile" />
                 <activity android:name=".SharedPackage.Activity.RegisterActivity" />

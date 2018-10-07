@@ -5,10 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@color/colorPrimary"
     tools:context=".HandMaker.Activity.Activity_AddProduct">
 
 
+=======
+    android:background="@color/colorwhite"
+    tools:context=".HandMaker.Activity.Activity_AddProduct">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:id="@+id/addPro_back"
+                android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_back"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="@string/addProduct"
+                android:textColor="@color/colorBlack"
+                android:textSize="26sp"
+                android:textStyle="bold|normal"
+                />
+
+            <ImageButton
+
+                android:id="@+id/photoPicker"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/photo"
+                android:background="@drawable/style_button_add_photo"
+                />
+        </RelativeLayout>
+
+
+>>>>>>> 1fcc1e4a516d009d1ce2641a0880c83b117893f1
     <ScrollView
 
         android:layout_margin="10dp"
@@ -17,13 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="15dp"
-        >
+
 
 
 
@@ -33,93 +77,121 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    >
+
                 <EditText
                     android:id="@+id/productName"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="@string/product_name"
-                    android:textAlignment="center"
+                    android:singleLine="true"
                     android:textSize="20sp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:padding="8dp"
+
                     android:layout_marginTop="25dp"
                     android:layout_below="@+id/toolbar"
-                    android:background="@color/colorLightgray"
+                    android:theme="@style/EditTextTheme2"
                     />
+                </android.support.design.widget.TextInputLayout>
 
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    >
                 <EditText
                     android:id="@+id/productPrice"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="@string/productPrice"
-                    android:textAlignment="center"
+                    android:singleLine="true"
                     android:textSize="20sp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:padding="8dp"
+
                     android:layout_marginTop="25dp"
                     android:layout_below="@+id/productName"
-                    android:background="@color/colorLightgray"
+                    android:theme="@style/EditTextTheme2"
                     />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    >
 
                 <EditText
                     android:id="@+id/productDesc"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="@string/productDescription"
-                    android:textAlignment="center"
+                    android:singleLine="true"
                     android:textSize="20sp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:padding="8dp"
                     android:layout_marginTop="25dp"
                     android:layout_below="@+id/productPrice"
-                    android:background="@color/colorLightgray"
+                    android:theme="@style/EditTextTheme2"
                     />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_keywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    >
 
                 <EditText
                     android:id="@+id/productKeyWords"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:hint="@string/productKeyWord"
-                    android:textAlignment="center"
+                    android:singleLine="true"
                     android:textSize="20sp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:padding="8dp"
                     android:layout_marginTop="25dp"
                     android:layout_below="@+id/productDesc"
                     android:layout_marginBottom="30dp"
-                    android:background="@color/colorLightgray"
+                    android:theme="@style/EditTextTheme2"
                     />
+                </android.support.design.widget.TextInputLayout>
 
-                <RelativeLayout
 
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <ImageButton
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginLeft="27dp"
-                        android:layout_marginBottom="5dp"
-                        android:src="@drawable/photo"
-                        android:background="@drawable/style_button_add_photo"
-                        />
-                    <ImageButton
-                        android:layout_width="75dp"
+
+                    <Button
+                        android:id="@+id/ADD"
+                        android:layout_width="match_parent"
                         android:layout_height="75dp"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="27dp"
-                        android:layout_marginBottom="5dp"
-                        android:src="@drawable/yes"
-                        android:background="@drawable/style_button_add_product"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/add"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorwhite"
+                        android:background="@color/colorLightBlue"
                         />
 
-                </RelativeLayout>
 
             </LinearLayout>
 
 
-    </android.support.v7.widget.CardView>
+
 
     </ScrollView>
 

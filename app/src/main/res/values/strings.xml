@@ -12,9 +12,9 @@
     <string name="product_name">Product Name</string>
     <string name="delete">Delete</string>
     <string name="productName">PRODUCT NAME</string>
-    <string name="productPrice">PRODUCT PRICE</string>
-    <string name="productDescription">PRODUCT DESCRIPTION</string>
-    <string name="productKeyWord">PRODUCT KEYWORDS</string>
+    <string name="productPrice">Product Price</string>
+    <string name="productDescription">Product Description</string>
+    <string name="productKeyWord">Product Keywords</string>
     <string name="addProduct">ADD PRODUCT</string>
     <string name="yourName">Your Name</string>
     <string name="subscripe">Subscripe</string>
@@ -38,6 +38,9 @@
     <string name="PleaseConfirmYourPassword">Please Confirm Your Password</string>
     <string name="PasswordDontMatch">Password dont match</string>
     <string name="Phone">Phone</string>
+    <string name="add">add</string>
+    <string name="required">required</string>
+
 
 
 </resources>

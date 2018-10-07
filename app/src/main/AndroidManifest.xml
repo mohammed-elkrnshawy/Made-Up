@@ -23,7 +23,9 @@
                 <activity android:name=".HandMaker.Activity.SellerHomeActivity"
                     android:theme="@style/AppTheme"/>
                 <activity android:name=".HandMaker.Activity.Activity_ProductDetails" />
-                <activity android:name=".HandMaker.Activity.Activity_AddProduct" />
+                <activity android:name=".HandMaker.Activity.Activity_AddProduct" >
+
+                </activity>
                 <activity android:name=".HandMaker.Activity.Activity_Profile" />
                 <activity android:name=".SharedPackage.Activity.RegisterActivity" />
                 <activity android:name=".HandMaker.Activity.Activity_Sales" />

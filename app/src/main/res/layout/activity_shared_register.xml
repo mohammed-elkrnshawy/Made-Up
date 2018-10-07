@@ -176,7 +176,7 @@
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/colorwhite"
                         android:hint="@string/Phone"
-                        android:drawableStart="@drawable/ic_password"
+                        android:drawableStart="@drawable/ic_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 

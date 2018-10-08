@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorwhite"
     tools:context=".HandMaker.Activity.Activity_AddProduct">
 
 
@@ -38,20 +38,11 @@
                 android:textStyle="bold|normal"
                 />
 
-            <ImageButton
 
-                android:id="@+id/photoPicker"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_margin="5dp"
-                android:src="@drawable/photo"
-                android:background="@drawable/style_button_add_photo"
-                />
         </RelativeLayout>
 
 
->>>>>>> 1fcc1e4a516d009d1ce2641a0880c83b117893f1
+
     <ScrollView
 
         android:layout_margin="10dp"
@@ -65,51 +56,88 @@
 
 
             <LinearLayout
-
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_name"
+                <LinearLayout
+                    android:background="@color/colorLightgray"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/photoPicker"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/image_add_button"
+                        android:background="@drawable/style_button_add_photo"
+                        />
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_ar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     >
 
                 <EditText
-                    android:id="@+id/productName"
+                    android:id="@+id/productName_ar"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="45dp"
                     android:hint="@string/product_name"
                     android:singleLine="true"
                     android:textSize="20sp"
                     android:padding="8dp"
-
                     android:layout_marginTop="25dp"
-                    android:layout_below="@+id/toolbar"
                     android:theme="@style/EditTextTheme2"
                     />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_en"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/productName_en"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="@string/product_name2"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="25dp"
+                        android:theme="@style/EditTextTheme2"
+                        />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/input_layout_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     >
                 <EditText
                     android:id="@+id/productPrice"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="45dp"
                     android:hint="@string/productPrice"
                     android:singleLine="true"
                     android:textSize="20sp"
                     android:padding="8dp"
-
                     android:layout_marginTop="25dp"
                     android:layout_below="@+id/productName"
                     android:theme="@style/EditTextTheme2"
@@ -117,57 +145,99 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_description"
+                    android:id="@+id/input_layout_description_ar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     >
 
                 <EditText
-                    android:id="@+id/productDesc"
+                    android:id="@+id/productDesc_ar"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="45dp"
                     android:hint="@string/productDescription"
                     android:singleLine="true"
                     android:textSize="20sp"
                     android:padding="8dp"
                     android:layout_marginTop="25dp"
-                    android:layout_below="@+id/productPrice"
                     android:theme="@style/EditTextTheme2"
                     />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_keywords"
+                    android:id="@+id/input_layout_description_en"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/productDesc_en"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="@string/productDescription2"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="25dp"
+                        android:theme="@style/EditTextTheme2"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_keywords_ar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     >
 
                 <EditText
-                    android:id="@+id/productKeyWords"
+                    android:id="@+id/productKeyWords_ar"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="45dp"
                     android:hint="@string/productKeyWord"
                     android:singleLine="true"
                     android:textSize="20sp"
                     android:padding="8dp"
                     android:layout_marginTop="25dp"
-                    android:layout_below="@+id/productDesc"
-                    android:layout_marginBottom="30dp"
                     android:theme="@style/EditTextTheme2"
                     />
                 </android.support.design.widget.TextInputLayout>
 
 
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_keywords_en"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/productKeyWords_en"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="@string/productKeyWord2"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        android:padding="8dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_below="@+id/productDesc"
+                        android:layout_marginBottom="30dp"
+                        android:theme="@style/EditTextTheme2"
+                        />
+                </android.support.design.widget.TextInputLayout>
 
 
-                    <Button
+
+
+                <Button
                         android:id="@+id/ADD"
                         android:layout_width="match_parent"
-                        android:layout_height="75dp"
+                        android:layout_height="50dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginLeft="30dp"
@@ -177,9 +247,8 @@
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:textColor="@color/colorwhite"
-                        android:background="@color/colorLightBlue"
+                        android:background="@drawable/shape_button_add1"
                         />
-
 
             </LinearLayout>
 

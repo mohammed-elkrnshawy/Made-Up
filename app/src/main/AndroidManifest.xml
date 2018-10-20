@@ -3,6 +3,8 @@
     package="com.example.a3zt.madeup">
 
         <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
         <application
             android:allowBackup="true"
@@ -12,17 +14,18 @@
             android:supportsRtl="true"
             android:theme="@style/NoTitleBar">
                 <activity android:name=".SharedPackage.Activity.SplashActivity">
-                        <intent-filter>
-                                <action android:name="android.intent.action.MAIN" />
 
-                                <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
                 </activity>
                 <activity android:name=".SharedPackage.Activity.LoginActivity" />
                 <activity android:name=".SharedPackage.Activity.StartActivity" />
                 <activity android:name=".HandMaker.Activity.SellerHomeActivity"/>
                 <activity android:name=".HandMaker.Activity.Activity_ProductDetails" />
                 <activity android:name=".HandMaker.Activity.Activity_AddProduct" >
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+
+                                <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
                 </activity>
                 <activity android:name=".HandMaker.Activity.Activity_Profile" />
                 <activity android:name=".SharedPackage.Activity.RegisterActivity" />

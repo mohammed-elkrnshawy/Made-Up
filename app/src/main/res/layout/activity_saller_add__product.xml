@@ -10,43 +10,12 @@
 
 
 
-        <RelativeLayout
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-
-            >
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:id="@+id/addPro_back"
-                android:layout_height="40dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_back"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                android:text="@string/addProduct"
-                android:textColor="@color/colorBlack"
-                android:textSize="26sp"
-                android:textStyle="bold|normal"
-                />
-
-
-        </RelativeLayout>
 
 
 
     <ScrollView
 
         android:layout_margin="10dp"
-
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -60,25 +29,81 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:background="@color/colorLightgray"
+
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="8dp"
-                    >
+                    android:layout_height="wrap_content">
 
-                    <ImageButton
-                        android:id="@+id/photoPicker"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="5dp"
-                        android:src="@drawable/image_add_button"
-                        android:background="@drawable/style_button_add_photo"
-                        />
+                    <LinearLayout
+                        android:background="@color/colorLightgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
 
-                </LinearLayout>
+                        <ImageView
+
+                            android:id="@+id/photoPicker"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                           android:padding="4dp"
+                            android:src="@drawable/image_add_button"
+                            android:background="@drawable/style_button_add_photo"
+                            />
+
+                        <ImageView
+                            android:padding="4dp"
+                            android:id="@+id/photoPicker2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/image_add_button"
+                            android:background="@drawable/style_button_add_photo"
+                            />
+
+                        <ImageView
+                            android:padding="4dp"
+                            android:id="@+id/photoPicker3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/image_add_button"
+                            android:background="@drawable/style_button_add_photo"
+                            />
+
+                        <ImageView
+                            android:padding="4dp"
+                            android:id="@+id/photoPicker4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/image_add_button"
+                            android:background="@drawable/style_button_add_photo"
+                            />
+
+                        <ImageView
+
+                            android:padding="4dp"
+                            android:id="@+id/photoPicker5"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/image_add_button"
+                            android:background="@drawable/style_button_add_photo"
+                            />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/input_layout_name_ar"
@@ -206,31 +231,6 @@
                     android:theme="@style/EditTextTheme2"
                     />
                 </android.support.design.widget.TextInputLayout>
-
-
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_keywords_en"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    >
-
-                    <EditText
-                        android:id="@+id/productKeyWords_en"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:hint="@string/productKeyWord2"
-                        android:singleLine="true"
-                        android:textSize="20sp"
-                        android:padding="8dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_below="@+id/productDesc"
-                        android:layout_marginBottom="30dp"
-                        android:theme="@style/EditTextTheme2"
-                        />
-                </android.support.design.widget.TextInputLayout>
-
 
 
 

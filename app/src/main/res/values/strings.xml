@@ -16,7 +16,7 @@
     <string name="productPrice">Price</string>
     <string name="productDescription">Arabic Description</string>
     <string name="productDescription2">English Description</string>
-    <string name="productKeyWord">Arabic Keywords</string>
+    <string name="productKeyWord">Tags</string>
     <string name="productKeyWord2">English Keywords</string>
     <string name="addProduct">ADD PRODUCT</string>
     <string name="yourName">Your Name</string>
@@ -44,6 +44,8 @@
     <string name="coins">L.E</string>
     <string name="add">add</string>
     <string name="required">required</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="take_photo">Take Photo</string>
 
 
 

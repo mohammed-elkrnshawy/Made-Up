@@ -44,7 +44,7 @@ public interface UserService {
  );
 
 
-    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+        @Headers({ "Content-Type: application/json;charset=UTF-8"})
     @GET("product/seller/{id}")
     Call<ResponseProduct> allProductsUser(
             @Path("id") String userID,
@@ -52,6 +52,13 @@ public interface UserService {
             @Header("X-localization") String Localization
     );
 
+
+    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+    @GET("category")
+    Call<ResponseUser> categories(
+            @Header("Authorization") String Token,
+            @Header("X-localization") String Localization
+    );
 
     @Headers({ "Content-Type: application/json;charset=UTF-8"})
     @GET("profile")

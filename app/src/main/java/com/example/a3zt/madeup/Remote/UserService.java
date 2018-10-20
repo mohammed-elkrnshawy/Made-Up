@@ -37,7 +37,7 @@ public interface UserService {
  );
 
 
-    @Headers({ "Content-Type: application/json;charset=UTF-8"})
+        @Headers({ "Content-Type: application/json;charset=UTF-8"})
     @GET("product/seller/{id}")
     Call<ResponseProduct> allProductsUser(
             @Path("id") String userID,

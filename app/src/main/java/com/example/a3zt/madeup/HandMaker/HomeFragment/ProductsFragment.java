@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,6 +58,9 @@ public class ProductsFragment extends Fragment {
     }
 
     private void InitComponent() {
+
+        Log.d("AASDD",user.getToken());
+
         userService = ApiUtlis.getUserService();
 
         recyclerProducts=view.findViewById(R.id.recycle_Products);

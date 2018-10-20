@@ -10,7 +10,9 @@
     <color name="colorview">#c9c6c6</color>
     <color name="colorLightgray">#f4f1f1</color>
     <color name="colorDarkgray">#dedddd</color>
+    <color name="colorDarkgray2">#dccfcf</color>
     <color name="colorGreen">#5ce408</color>
     <color name="colorLightGreen">#71ff1a</color>
     <color name="colorLightBlue">#5eddfd</color>
+    <color name="colorDarkBlue">#006179</color>
 </resources>

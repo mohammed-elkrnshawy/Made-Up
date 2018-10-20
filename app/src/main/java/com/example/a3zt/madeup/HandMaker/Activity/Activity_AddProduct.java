@@ -17,8 +17,8 @@ import com.example.a3zt.madeup.R;
 public class Activity_AddProduct extends AppCompatActivity {
 
 
-    private EditText Edt_ProductName , Edt_ProductPrice , Edt_ProductDesc , Edt_ProductKyewords ;
-    private TextInputLayout inputLayoutName, inputLayoutPrice, inputLayoutDesc , inputLayoutKeywords ;
+    private EditText Edt_ProductName , Edt_ProductName_EN , Edt_ProductPrice , Edt_ProductDesc , Edt_ProductDesc_EN , Edt_ProductKyewords , Edt_ProductKyewords_EN ;
+    private TextInputLayout inputLayoutName , inputLayoutName_EN, inputLayoutPrice, inputLayoutDesc , inputLayoutDesc_EN , inputLayoutKeywords ,inputLayoutKeywords_EN ;
     private Button Btn_Add  ;
     private ImageButton PhotoPicker ;
 
@@ -37,23 +37,32 @@ public class Activity_AddProduct extends AppCompatActivity {
 
 
     private void initView() {
-        Edt_ProductName = findViewById(R.id.productName) ;
+        Edt_ProductName = findViewById(R.id.productName_ar) ;
+        Edt_ProductName_EN = findViewById(R.id.productName_en) ;
         Edt_ProductPrice = findViewById(R.id.productPrice) ;
-        Edt_ProductDesc = findViewById(R.id.productDesc) ;
-        Edt_ProductKyewords = findViewById(R.id.productKeyWords) ;
-        inputLayoutName = findViewById(R.id.input_layout_name);
+        Edt_ProductDesc = findViewById(R.id.productDesc_ar) ;
+        Edt_ProductDesc_EN = findViewById(R.id.productDesc_en) ;
+        Edt_ProductKyewords = findViewById(R.id.productKeyWords_ar) ;
+        Edt_ProductKyewords_EN = findViewById(R.id.productKeyWords_en) ;
+        inputLayoutName = findViewById(R.id.input_layout_name_ar);
+        inputLayoutName_EN = findViewById(R.id.input_layout_name_en);
         inputLayoutPrice = findViewById(R.id.input_layout_price);
-        inputLayoutDesc = findViewById(R.id.input_layout_description);
-        inputLayoutKeywords = findViewById(R.id.input_layout_keywords);
+        inputLayoutDesc = findViewById(R.id.input_layout_description_ar);
+        inputLayoutDesc_EN = findViewById(R.id.input_layout_description_en);
+        inputLayoutKeywords = findViewById(R.id.input_layout_keywords_ar);
+        inputLayoutKeywords_EN = findViewById(R.id.input_layout_keywords_en);
         Btn_Add = findViewById(R.id.ADD);
         PhotoPicker = findViewById(R.id.photoPicker) ;
     }
 
     private void EditChangeListener() {
         Edt_ProductName.addTextChangedListener(new MyTextWatcher(Edt_ProductName));
+        Edt_ProductName_EN.addTextChangedListener(new MyTextWatcher(Edt_ProductName_EN));
         Edt_ProductPrice.addTextChangedListener(new MyTextWatcher(Edt_ProductPrice));
         Edt_ProductDesc.addTextChangedListener(new MyTextWatcher(Edt_ProductDesc));
+        Edt_ProductDesc_EN.addTextChangedListener(new MyTextWatcher(Edt_ProductDesc_EN));
         Edt_ProductKyewords.addTextChangedListener(new MyTextWatcher(Edt_ProductKyewords));
+        Edt_ProductKyewords_EN.addTextChangedListener(new MyTextWatcher(Edt_ProductKyewords_EN));
     }
 
     private void AddOnClick() {
@@ -70,6 +79,10 @@ public class Activity_AddProduct extends AppCompatActivity {
             return;
         }
 
+        if(!validateName_EN()){
+            return;
+        }
+
         if(!validatePrice()){
             return;
         }
@@ -78,7 +91,15 @@ public class Activity_AddProduct extends AppCompatActivity {
             return;
         }
 
+        if(!validateDesc_EN()){
+            return;
+        }
+
         if(!validateKeywords()){
+            return;
+        }
+
+        if(!validateKeywords_EN()){
             return;
         }
 
@@ -92,6 +113,17 @@ public class Activity_AddProduct extends AppCompatActivity {
             requestFocus(Edt_ProductName);
         }else {
             inputLayoutName.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    private Boolean validateName_EN(){
+        final  String ProductName = Edt_ProductName_EN.getText().toString().trim() ;
+        if (TextUtils.isEmpty(ProductName)){
+            inputLayoutName_EN.setError(getString(R.string.required));
+            requestFocus(Edt_ProductName_EN);
+        }else {
+            inputLayoutName_EN.setErrorEnabled(false);
         }
         return true;
     }
@@ -118,6 +150,17 @@ public class Activity_AddProduct extends AppCompatActivity {
         return true;
     }
 
+    private Boolean validateDesc_EN(){
+        final  String ProductDesc = Edt_ProductDesc_EN.getText().toString().trim() ;
+        if (TextUtils.isEmpty(ProductDesc)){
+            inputLayoutDesc_EN.setError(getString(R.string.required));
+            requestFocus(Edt_ProductDesc_EN);
+        }else {
+            inputLayoutDesc_EN.setErrorEnabled(false);
+        }
+        return true;
+    }
+
     private Boolean validateKeywords(){
         final  String ProductKeywords = Edt_ProductKyewords.getText().toString().trim() ;
         if (TextUtils.isEmpty(ProductKeywords)){
@@ -125,6 +168,17 @@ public class Activity_AddProduct extends AppCompatActivity {
             requestFocus(Edt_ProductKyewords);
         }else {
             inputLayoutKeywords.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    private Boolean validateKeywords_EN(){
+        final  String ProductKeywords = Edt_ProductKyewords_EN.getText().toString().trim() ;
+        if (TextUtils.isEmpty(ProductKeywords)){
+            inputLayoutKeywords_EN.setError(getString(R.string.required));
+            requestFocus(Edt_ProductKyewords_EN);
+        }else {
+            inputLayoutKeywords_EN.setErrorEnabled(false);
         }
         return true;
     }
@@ -157,17 +211,26 @@ public class Activity_AddProduct extends AppCompatActivity {
         public void afterTextChanged(Editable s) {
 
             switch (view.getId()){
-                case R.id.productName :
+                case R.id.productName_ar :
                     validateName() ;
+                    break;
+                case R.id.productName_en :
+                    validateName_EN() ;
                     break;
                 case R.id.productPrice :
                     validatePrice() ;
                     break;
-                case R.id.productDesc :
+                case R.id.productDesc_ar :
                     validateDesc() ;
                     break;
-                case R.id.productKeyWords :
+                case R.id.productDesc_en :
+                    validateDesc_EN() ;
+                    break;
+                case R.id.productKeyWords_ar :
                     validateKeywords();
+                    break;
+                case R.id.productKeyWords_en :
+                    validateKeywords_EN();
                     break;
             }
         }
